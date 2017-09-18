@@ -1,5 +1,12 @@
 #!/usr/bin/env fish
 
+mkdir -p $HOME/.config/fish
+
+for f in fish/*
+	rm -f $HOME/.config/fish/(basename $f)
+	ln -s $PWD/$f $HOME/.config/fish/(basename $f)
+end
+
 mkdir -p $HOME/.config/fish/functions
 
 for f in fish_functions/*
