@@ -1,0 +1,25 @@
+[user]
+	name = Peter Bourgon
+	email = peter@bourgon.org
+
+[push]
+	default = nothing # be explicit!
+
+[alias]
+	st = status
+	dif = diff
+	pul = pull
+	branches = branch
+	remotes = remote
+	switchto = checkout
+	unstage = reset HEAD --
+	uncommit = reset --soft HEAD^
+	outgoing = "!git lol origin/$(git rev-parse --abbrev-ref HEAD).."
+	incoming = "!git lol ..origin/$(git rev-parse --abbrev-ref HEAD)"
+	plog = log --graph --pretty=format:'%Cred%h%Creset █ %Cblue[%an]%Creset █ %Cred(%cr)%Creset █ %s █ %Cgreen%d%Creset'
+	lol  = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pl = "!git plog -25 | column -s'█' -t 2>/dev/null | less -r"
+
+[color]
+	ui = auto
