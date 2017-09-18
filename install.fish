@@ -4,14 +4,14 @@ mkdir -p $HOME/.config/fish/functions
 
 for f in fish_functions/*
 	rm -f $HOME/.config/fish/functions/(basename $f)
-	ln -s $PWD/(basename $f) $HOME/.config/fish/functions/(basename $f)
+	ln -s $PWD/$f $HOME/.config/fish/functions/(basename $f)
 end
 
 mkdir -p $HOME/.config/fish/env
 
 for f in fish_env/*
 	rm -f $HOME/.config/fish/env/(basename $f)
-	ln -s $PWD/(basename $f) $HOME/.config/fish/env/(basename $f)
+	ln -s $PWD/$f $HOME/.config/fish/env/(basename $f)
 end
 
 mkdir -p $HOME/bin
