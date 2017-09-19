@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+LOCAL_PORT=$1
+HOST=$2
+REMOTE_PORT=$3
+
+ssh -N -f -C -L $LOCAL_PORT:localhost:$REMOTE_PORT $HOST
