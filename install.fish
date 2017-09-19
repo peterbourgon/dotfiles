@@ -31,3 +31,9 @@ end
 rm -f $HOME/.gitconfig
 ln -s $PWD/gitconfig $HOME/.gitconfig
 
+rm -f $HOME/.vimrc
+ln -s $PWD/vimrc $HOME/.vimrc
+
+rm -f $HOME/.tmux.conf
+ln -s $PWD/tmux.conf $HOME/.tmux.conf
+
