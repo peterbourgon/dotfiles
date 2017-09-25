@@ -37,3 +37,7 @@ ln -s $PWD/vimrc $HOME/.vimrc
 rm -f $HOME/.tmux.conf
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
 
+if [ (uname) = "Darwin" ]
+	rm -f "$HOME/Library/Application Support/Code/User/settings.json"
+	ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+end

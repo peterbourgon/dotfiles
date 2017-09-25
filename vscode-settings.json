@@ -1,0 +1,8 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Hack",
+    "editor.renderWhitespace": "boundary",
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "editor.minimap.enabled": "true",
+    "workbench.startupEditor": "none"
+}
