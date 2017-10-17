@@ -3,6 +3,9 @@
     "editor.fontFamily": "Hack",
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Monokai Dark Soda",
-    "editor.minimap.enabled": "true",
-    "workbench.startupEditor": "none"
+    "editor.minimap.enabled": true,
+    "workbench.startupEditor": "none",
+    "search.exclude": {
+        "**/GOPATH": true
+    }
 }
