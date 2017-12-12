@@ -5,6 +5,7 @@
     "workbench.colorTheme": "Monokai Dark Soda",
     "editor.minimap.enabled": true,
     "workbench.startupEditor": "none",
+    "editor.codeLens": false,
     "search.exclude": {
         "**/GOPATH": true
     }
