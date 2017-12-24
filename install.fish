@@ -38,6 +38,9 @@ rm -f $HOME/.tmux.conf
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
 
 if [ (uname) = "Darwin" ]
+	if test ! -d "$HOME/Library/Application Support/Code/User"
+		mkdir -p "$HOME/Library/Application Support/Code/User"
+	end
 	rm -f "$HOME/Library/Application Support/Code/User/settings.json"
 	ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 end
