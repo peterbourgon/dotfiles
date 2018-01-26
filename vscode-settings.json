@@ -8,5 +8,6 @@
     "editor.codeLens": false,
     "search.exclude": {
         "**/GOPATH": true
-    }
+    },
+    "html.autoClosingTags": false
 }
