@@ -10,5 +10,6 @@
         "**/GOPATH": true
     },
     "html.autoClosingTags": false,
-    "html.format.wrapLineLength": 100
+    "html.format.wrapLineLength": 100,
+    "telemetry.enableTelemetry": false
 }
