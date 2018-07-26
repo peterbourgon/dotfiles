@@ -3,11 +3,12 @@
     "editor.fontFamily": "Hack",
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Monokai Dark Soda",
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "workbench.startupEditor": "none",
     "editor.codeLens": false,
     "search.exclude": {
         "**/GOPATH": true
     },
-    "html.autoClosingTags": false
+    "html.autoClosingTags": false,
+    "html.format.wrapLineLength": 100
 }
