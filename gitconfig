@@ -1,7 +1,7 @@
 [user]
 	name = Peter Bourgon
 	email = peter@bourgon.org
-	#signingkey = AA5A49A6D022E9F6
+	# signingkey = AA5A49A6D022E9F6
 
 [push]
 	default = nothing # be explicit!
@@ -35,4 +35,4 @@
 	insteadOf = https://bitbucket.org/
 
 [commit]
-	#gpgsign = true
+	# gpgsign = true
