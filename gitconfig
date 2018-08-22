@@ -17,10 +17,9 @@
 	uncommit = reset --soft HEAD^
 	outgoing = "!git lol origin/$(git rev-parse --abbrev-ref HEAD).."
 	incoming = "!git lol ..origin/$(git rev-parse --abbrev-ref HEAD)"
-	plog = log --graph --pretty=format:'%Cred%h%Creset █ %Cblue[%an]%Creset █ %Cred(%cr)%Creset █ %s █ %Cgreen%d%Creset'
+	plog = log --graph --pretty=format:'%C(auto,red)%h · %C(auto,magenta)%an · %C(auto,red)%cr · %C(auto)%s%C(auto,green)%d'
 	lol  = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	pl = "!git plog -25 | column -s'█' -t 2>/dev/null | less -r"
 
 [color]
 	ui = auto
