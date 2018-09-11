@@ -11,5 +11,6 @@
     },
     "html.autoClosingTags": false,
     "html.format.wrapLineLength": 100,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "workbench.fontAliasing": "auto"
 }
