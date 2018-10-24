@@ -1,6 +1,6 @@
 {
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Hack",
+    "editor.fontFamily": "IBM Plex Mono",
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Monokai Dark Soda",
     "editor.minimap.enabled": false,
@@ -12,5 +12,10 @@
     "html.autoClosingTags": false,
     "html.format.wrapLineLength": 100,
     "telemetry.enableTelemetry": false,
-    "workbench.fontAliasing": "auto"
+    "telemetry.enableCrashReporter": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.snippetSuggestions": "none",
+    "workbench.fontAliasing": "auto",
+    "go.autocompleteUnimportedPackages": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
 }
