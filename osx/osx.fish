@@ -24,9 +24,10 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom.
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true # follow keyboard focus
+# Doesn't seem to work in Mojave, at least.
+# defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+# defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true # follow keyboard focus
 
 # Enable full keyboard access for all controls (Accessibility pane).
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -127,7 +128,8 @@ sudo mdutil -i on / >/dev/null # make sure indexing is enabled for the main volu
 sudo mdutil -E / >/dev/null # rebuild the index from scratch
 
 # Disable spotlight indexing for any volume that gets mounted and has not been indexed before.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# Doesn't seem to work in Mojave at least.
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 
 # DIALOGS AND ERRATA
@@ -172,4 +174,5 @@ defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
 
 # Disable local Time Machine backups.
-hash tmutil >/dev/null 2>&1 ; and sudo tmutil disablelocal
+# Doesn't seem to work in Mojave at least.
+# hash tmutil >/dev/null 2>&1 ; and sudo tmutil disablelocal
