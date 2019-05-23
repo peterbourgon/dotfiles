@@ -1,21 +1,32 @@
 {
-    "window.zoomLevel": 0,
     "editor.fontFamily": "IBM Plex Mono",
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Monokai Dark Soda",
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "none",
     "editor.codeLens": false,
-    "search.exclude": {
-        "**/GOPATH": true
-    },
-    "html.autoClosingTags": false,
-    "html.format.wrapLineLength": 100,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.copyWithSyntaxHighlighting": false,
     "editor.snippetSuggestions": "none",
     "workbench.fontAliasing": "auto",
     "go.autocompleteUnimportedPackages": true,
-    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "window.zoomLevel": 1, 
+
+    // https://github.com/golang/go/wiki/gopls#editors-instructions
+    "go.useLanguageServer": true,
+    "go.languageServerExperimentalFeatures": {
+            "diagnostics": true // for build and vet errors as you type
+    },
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "gopls": {
+        "usePlaceholders": true // add parameter placeholders when completing a function
+    },
+    "files.eol": "\n", // formatting only supports LF line endings
 }
