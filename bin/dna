@@ -1,8 +1,0 @@
-#!/usr/bin/env fish
-
-set gatc g a t c
-for i in (seq 1 32)
-	math 1 + '(' (random) '%' 4 ')' | read r
-	echo -n $gatc[$r]
-end
-
