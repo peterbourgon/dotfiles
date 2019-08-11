@@ -2,21 +2,17 @@
 
 # https://gist.github.com/brandonb927/3195465
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# https://github.com/fesja/dotfiles/blob/master/.macos
 
+# Prevent System Preferences from interfering.
+osascript -e 'tell application "System Preferences" to quit'
 
-# NAME
-
-
-# Set computer name.
+# Set hostname.
 read -P "Computer name: " name
 sudo scutil --set ComputerName $name
 sudo scutil --set HostName $name
 sudo scutil --set LocalHostName $name
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
-
-
-# MOUSE AND KEYBOARD
-
 
 # Enable tap to click for this user and the login screen.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -25,9 +21,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom.
 # Doesn't seem to work in Mojave, at least.
-# defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-# defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true # follow keyboard focus
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true # follow keyboard focus
 
 # Enable full keyboard access for all controls (Accessibility pane).
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -40,10 +36,6 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Disable autocorrect.
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-
-# DISPLAY AND SCREEN SAVER
-
 
 # Don't adjust screen brightness in low light.
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
@@ -72,10 +64,6 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-
-# FINDER
-
-
 # New Finder window opens home directory by default.
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://{$HOME}/"
@@ -95,11 +83,7 @@ defaults write com.apple.finder FXPreferredViewStyle Clmv
 # Keep folders on top when sorting by name.
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-
-# SPOTLIGHT
-
-
-# Stop a few things from getting indexed.
+# Stop a few things from getting indexed with Spotlight.
 defaults write com.apple.spotlight orderedItems -array \
   '{"enabled" = 1;"name" = "APPLICATIONS";}' \
   '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
@@ -128,12 +112,8 @@ sudo mdutil -i on / >/dev/null # make sure indexing is enabled for the main volu
 sudo mdutil -E / >/dev/null # rebuild the index from scratch
 
 # Disable spotlight indexing for any volume that gets mounted and has not been indexed before.
-# Doesn't seem to work in Mojave at least.
+# Doesn't work on later versions of macOS.
 # sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-
-
-# DIALOGS AND ERRATA
-
 
 # Expanded Save and Print dialogs by default.
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -143,14 +123,11 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Save to disk, rather than iCloud, by default.
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-
-# DOCK AND ICONS
-
-
 # Enable snap-to-grid for icons by default.
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# Doesn't work on later versions of macOS.
+# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Wipe all default app icons from the dock.
 defaults write com.apple.dock persistent-apps -array
@@ -161,18 +138,11 @@ defaults write com.apple.dock tilesize -int 36
 # Auto-hide the Dock.
 defaults write com.apple.dock autohide -bool true
 
-
-# PRIVACY
-
-
 # In Safari, don't send search queries to Apple.
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
-
-# TIME MACHINE
-
-
 # Disable local Time Machine backups.
-# Doesn't seem to work in Mojave at least.
+# Doesn't work on later versions of macOS.
 # hash tmutil >/dev/null 2>&1 ; and sudo tmutil disablelocal
+
