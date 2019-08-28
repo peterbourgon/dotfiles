@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "IBM Plex Mono",
+    "editor.fontFamily": "Iosevka Extended",
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Monokai Dark Soda",
     "editor.minimap.enabled": false,
@@ -11,7 +11,7 @@
     "editor.snippetSuggestions": "none",
     "workbench.fontAliasing": "auto",
     "go.autocompleteUnimportedPackages": true,
-    "window.zoomLevel": 0, 
+    "window.zoomLevel": 1, 
 
     // https://github.com/golang/go/wiki/gopls#editors-instructions
     "go.useLanguageServer": true,
@@ -36,4 +36,6 @@
     ],
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": true,
+    "editor.fontLigatures": true,
+    "terminal.integrated.cursorStyle": "underline",
 }

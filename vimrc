@@ -1,24 +1,51 @@
-" minimal example from https://github.com/tpope/vim-pathogen
+" Defaults, mostly from govim's suggested minimal config.
+set nocompatible
+set nobackup
+set nowritebackup
+set noswapfile
+set number
+set background=dark
+
+filetype plugin on
+
+set mouse=a
+set ttymouse=sgr
+
+set updatetime=500
+set balloondelay=250
+set signcolumn=number
+
 syntax on
-filetype plugin indent on
 
-" vim doesn't play well with fish
-set shell=/bin/bash
-
-" preferences
 set autoindent
 set smartindent
-set number
-set tabstop=4
-set shiftwidth=4
-set background=dark
-set ruler
-set backspace=indent,eol,start
-set linebreak
-set nojoinspaces
+filetype indent on
 
-" markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+set backspace=2
 
-" ctrl-backspace should delete words
-imap <C-bs> <C-w>
+
+" Vim8 packages get loaded after the user's .vimrc.
+" Workaround is to force-load Vim8 packages early.
+packadd govim
+
+" Move hover popups below and to the right.
+call govim#config#Set("ExperimentalMouseTriggeredHoverPopupOptions", {
+      \ "mousemoved": "any",
+      \ "pos": "topleft",
+      \ "line": +1,
+      \ "col": 0,
+      \ "moved": "any",
+      \ "wrap": v:false,
+      \ "close": "click",
+      \ "padding": [0, 1, 0, 1],
+      \})
+
+" Change the hover popup colors.
+highlight Pmenu ctermbg=gray guibg=gray
+
+
+" Use buffers like tabs.
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+nnoremap <C-W> :bd<CR>
