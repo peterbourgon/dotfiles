@@ -19,21 +19,21 @@ if test $status -ne 0
 end
 
 if test (echo $mullvad | jq -r .mullvad_exit_ip) = "true"
-    echo ☗
+    echo ∀
     echo ---
-    echo "☗ Mullvad"
+    echo "∀ Mullvad"
 else if test (echo $iphub | jq -r .block) -eq 1
-    echo ▼
+    echo ∂
     echo ---
-    echo "▼ Commercial IP"
+    echo "∂ Commercial IP"
 else if test (echo $iphub | jq -r .block) -eq 2
-    echo ⨸
+    echo ∮
     echo ---
-    echo "⨸ Mixed IP"
+    echo "∮ Mixed IP"
 else if test (echo $iphub | jq -r .block) -eq 0
-    echo ⨀
+    echo ⏣
     echo ---
-    echo "⨀ Residential IP"
+    echo "⏣ Residential IP"
 else
     echo ⨂
     echo ---
