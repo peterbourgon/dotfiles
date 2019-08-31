@@ -11,7 +11,7 @@
     "editor.snippetSuggestions": "none",
     "workbench.fontAliasing": "auto",
     "go.autocompleteUnimportedPackages": true,
-    "window.zoomLevel": 1, 
+    "window.zoomLevel": 0, 
 
     // https://github.com/golang/go/wiki/gopls#editors-instructions
     "go.useLanguageServer": true,

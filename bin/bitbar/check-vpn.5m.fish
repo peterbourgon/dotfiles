@@ -18,26 +18,38 @@ if test $status -ne 0
     exit
 end
 
+# ∀ ∂ ⊡ ⊠ ⊟ ⊕ ⊖ ⊗ ⊘ ⊙ ⊚ ⊛ ⊜ ⊝ ⊞ ⊟ ⊠ ⊡ ⟁ ⟐
+# ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤧ ⤨ ⤩ ⤪ ⤫ ⤬ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲
+# ⟱ ⟰ ⟷ ⟺ ⤊ ⤓ ⤒ ⬱ ⇶ ⇵
+# ⦿ ⦾ ⧁ ⧀ ⦽ ⦼ ⦻ ⦸ ⦷ ⦶ ⦵ ⦰
+# ⧠ ⧢ ⧬ ⧭ ⧳ ⧲
+# ⨀ ⨁ ⨂ ⨸ ⨷ ⨻ ⨺ ⩌ ⩍ ⩐ ⩘ ⩗
+# ⨓ ⨐ ⨏ ⨎ ⨍ ⨖ ⨚ ⨙ ∮ ∯ ∰ ∱ ∲ ∳
+# ⫷ ⫸ ⪡ ⪢ 
+# ✓ ✔ ✕ ✖ ✗ ✘ ✙ ✚ ✛ ✜ ✝ ✞ ✟ ✠ ✡ ✢ ✣ ✤ ✥ ✦ ✧ ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰
+# ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❄ ❅ ❆ ❇ ❈ ❉ ❊ ❋
+# ➜
+
 if test (echo $mullvad | jq -r .mullvad_exit_ip) = "true"
-    echo ∀
+    echo ⤬
     echo ---
-    echo "∀ Mullvad"
+    echo "⤬ Mullvad"
 else if test (echo $iphub | jq -r .block) -eq 1
-    echo ∂
+    echo ⤫
     echo ---
-    echo "∂ Commercial IP"
+    echo "⤫ Commercial IP"
 else if test (echo $iphub | jq -r .block) -eq 2
     echo ∮
     echo ---
     echo "∮ Mixed IP"
 else if test (echo $iphub | jq -r .block) -eq 0
-    echo ⏣
+    echo ⨀
     echo ---
-    echo "⏣ Residential IP"
+    echo "⨀ Residential IP"
 else
-    echo ⨂
+    echo ∯
     echo ---
-    echo "⨂ Indeterminate result"
+    echo "∯ Indeterminate result"
 end
 
 echo ---
@@ -56,13 +68,13 @@ else
 end
 
 if test "$server" != "null"
-    printf 'Mullvad server %s\n' $server
+    printf 'Mullvad %s\n' $server
 end
 
-printf '%s %s\n' $asn $isp
+printf 'ASN %s ISP %s\n' $asn $isp
 
 if test "$org" != "null"
-    printf '%s\n' $org
+    printf 'Org %s\n' $org
 end
 
 printf '%s\n' $ip
