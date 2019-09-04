@@ -23,29 +23,3 @@ filetype indent on
 
 set backspace=2
 
-
-" Vim8 packages get loaded after the user's .vimrc.
-" Workaround is to force-load Vim8 packages early.
-packadd govim
-
-" Move hover popups below and to the right.
-call govim#config#Set("ExperimentalMouseTriggeredHoverPopupOptions", {
-      \ "mousemoved": "any",
-      \ "pos": "topleft",
-      \ "line": +1,
-      \ "col": 0,
-      \ "moved": "any",
-      \ "wrap": v:false,
-      \ "close": "click",
-      \ "padding": [0, 1, 0, 1],
-      \})
-
-" Change the hover popup colors.
-highlight Pmenu ctermbg=gray guibg=gray
-
-
-" Use buffers like tabs.
-set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
-nnoremap <C-W> :bd<CR>
