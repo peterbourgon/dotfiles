@@ -13,7 +13,6 @@ set ttymouse=sgr
 
 set updatetime=500
 set balloondelay=250
-set signcolumn=number
 
 syntax on
 
