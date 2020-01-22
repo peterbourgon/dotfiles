@@ -34,7 +34,7 @@
         "serve",
         "--debug=localhost:6060", // to investigate memory usage, see profiles 
     ],
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "editor.fontLigatures": true,
     "terminal.integrated.cursorStyle": "underline",
