@@ -1,4 +1,3 @@
-" Defaults, mostly from govim's suggested minimal config.
 set nocompatible
 set nobackup
 set nowritebackup
@@ -21,4 +20,3 @@ set smartindent
 filetype indent on
 
 set backspace=2
-
