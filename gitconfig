@@ -1,3 +1,6 @@
+[init]
+	defaultBranch = main
+
 [user]
 	name = Peter Bourgon
 	email = peter@bourgon.org

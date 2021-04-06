@@ -11,7 +11,6 @@
     "editor.snippetSuggestions": "none",
     "workbench.fontAliasing": "auto",
     "go.autocompleteUnimportedPackages": true,
-    "window.zoomLevel": 1,
     // https://github.com/golang/tools/blob/master/gopls/doc/vscode.md
     "go.useLanguageServer": true,
     "[go]": {
@@ -30,7 +29,7 @@
     "go.languageServerFlags": [
         "-rpc.trace", // for more detailed debug logging
         "serve",
-        "--debug=localhost:6060", // to investigate memory usage, see profiles
+        "--debug=localhost:6061", // to investigate memory usage, see profiles
     ],
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
@@ -50,4 +49,5 @@
     "html.validate.scripts": false,
     "html.format.wrapLineLength": 300,
     "html.format.indentHandlebars": true,
+    "window.zoomLevel": 1,
 }
