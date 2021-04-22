@@ -1,3 +1,5 @@
 function pcurl
-	curl --silent --show-error --verbose $argv 3>&1 1>&2 2>&3 | rg '(^(<|>))'
+	begin
+		curl --silent --show-error --verbose $argv 2>| rg --color=never '^(<|>) [^\r]' >&2
+	end >| cat
 end

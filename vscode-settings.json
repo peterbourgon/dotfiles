@@ -50,4 +50,5 @@
     "html.format.wrapLineLength": 300,
     "html.format.indentHandlebars": true,
     "window.zoomLevel": 1,
+    "rust.crate_blacklist": null,
 }

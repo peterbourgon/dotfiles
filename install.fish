@@ -43,4 +43,8 @@ if [ (uname) = "Darwin" ]
 	end
 	rm -f "$HOME/Library/Application Support/Code/User/settings.json"
 	ln -s $PWD/vscode-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+	rm -f "$HOME/Library/Application Support/Code/User/tasks.json"
+	ln -s $PWD/vscode-tasks.json "$HOME/Library/Application Support/Code/User/tasks.json"
+	rm -f "$HOME/Library/Application Support/Code/User/keybindings.json"
+	ln -s $PWD/vscode-keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
 end
