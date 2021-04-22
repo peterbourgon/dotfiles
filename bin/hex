@@ -1,4 +1,0 @@
-#!/usr/bin/env fish
-
-echo -n $argv | od -A n -t x1 | tr -dC [:alnum:] | xargs echo
-
