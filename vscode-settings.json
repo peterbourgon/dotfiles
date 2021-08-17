@@ -49,6 +49,7 @@
     "html.validate.scripts": false,
     "html.format.wrapLineLength": 300,
     "html.format.indentHandlebars": true,
-    "window.zoomLevel": 1,
     "rust.crate_blacklist": null,
+    "workbench.editor.untitled.hint": "hidden",
+    "json.maxItemsComputed": 15000,
 }

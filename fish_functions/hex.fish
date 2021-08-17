@@ -22,5 +22,11 @@ function hex
 		return 0
 	end
 
-	echo -n $argv | od -A n -t x1 | tr -dC [:alnum:] | xargs echo
+	switch (count $argv)
+		case 0
+			od -A n -t x1 | tr -dC [:alnum:]
+
+		case '*'
+			echo -n $argv | od -A n -t x1 | tr -dC [:alnum:] | xargs echo
+	end
 end
