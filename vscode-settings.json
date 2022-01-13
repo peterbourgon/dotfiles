@@ -11,7 +11,6 @@
     "editor.snippetSuggestions": "none",
     "workbench.fontAliasing": "auto",
     "go.autocompleteUnimportedPackages": true,
-    // https://github.com/golang/tools/blob/master/gopls/doc/vscode.md
     "go.useLanguageServer": true,
     "[go]": {
         "editor.snippetSuggestions": "none",
@@ -22,7 +21,6 @@
     },
     "gopls": {
         "usePlaceholders": true, // add parameter placeholders when completing a function
-        // Experimental settings
         "completeUnimported": true, // autocomplete unimported packages
         "deepCompletion": true, // enable deep completion
     },
@@ -52,4 +50,5 @@
     "rust.crate_blacklist": null,
     "workbench.editor.untitled.hint": "hidden",
     "json.maxItemsComputed": 15000,
+    "window.zoomLevel": 1,
 }
