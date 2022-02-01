@@ -1,7 +1,6 @@
 {
     "editor.fontFamily": "Iosevka",
     "editor.renderWhitespace": "boundary",
-    "workbench.colorTheme": "Monokai Dark Soda",
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "none",
     "editor.codeLens": false,
@@ -47,7 +46,11 @@
     "html.format.indentHandlebars": true,
     "workbench.editor.untitled.hint": "hidden",
     "json.maxItemsComputed": 15000,
-    "window.zoomLevel": 1,
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDragAndDrop": false,
+    "redhat.telemetry.enabled": false,
+    "go.buildOnSave": "workspace",
+    "go.lintOnSave": "workspace",
+    "search.useIgnoreFiles": false,
+    "window.zoomLevel": 1,
 }
