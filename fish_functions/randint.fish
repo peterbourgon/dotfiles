@@ -1,4 +1,4 @@
-function randint
+function randint --description "Generate random integers"
 	argparse 'h/help' 'r/right-pad' 'z/zero-pad' -- $argv
 	or return
 
@@ -41,4 +41,3 @@ function randint
 
 	printf $format (math $min + $r)
 end
-

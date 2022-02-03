@@ -49,8 +49,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDragAndDrop": false,
     "redhat.telemetry.enabled": false,
-    "go.buildOnSave": "workspace",
-    "go.lintOnSave": "workspace",
     "search.useIgnoreFiles": false,
     "window.zoomLevel": 1,
 }

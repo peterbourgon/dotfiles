@@ -1,4 +1,4 @@
-function randhex
+function randhex --description "Generate random hex strings"
 	argparse 'h/help' 'n/newline' -- $argv
 	or return
 
