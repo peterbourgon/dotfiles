@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Iosevka",
+    "editor.fontFamily": "Input Mono Condensed",
     "editor.renderWhitespace": "boundary",
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "none",
@@ -17,6 +17,7 @@
         }
     },
     "gopls": {
+        "build.experimentalWorkspaceModule": true,
         "usePlaceholders": true, // add parameter placeholders when completing a function
         "completeUnimported": true, // autocomplete unimported packages
         "deepCompletion": true, // enable deep completion
@@ -25,6 +26,9 @@
         "-rpc.trace", // for more detailed debug logging
         "serve",
         "--debug=localhost:6061", // to investigate memory usage, see profiles
+    ],
+    "go.buildFlags": [
+        "-buildvcs=false",
     ],
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
@@ -43,12 +47,15 @@
     "editor.insertSpaces": false,
     "html.validate.scripts": false,
     "html.format.wrapLineLength": 300,
-    "html.format.indentHandlebars": true,
     "workbench.editor.untitled.hint": "hidden",
     "json.maxItemsComputed": 15000,
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDragAndDrop": false,
     "redhat.telemetry.enabled": false,
     "search.useIgnoreFiles": false,
+    "html.autoClosingTags": false,
+    "html.format.endWithNewline": true,
+    "html.format.enable": false,
+    "go.toolsManagement.autoUpdate": true,
     "window.zoomLevel": 1,
 }

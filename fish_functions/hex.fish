@@ -10,7 +10,7 @@ function hex --description "Hexadecimal encoding and decoding helper"
 		echo "  hex -d HEXSTRING  Hex decode HEXSTRING"
 		echo ""
 		echo "FLAGS"
-		echo "  -d, --decode  hex decode rather than encode"
+		echo "  -d, --decode   hex decode rather than encode"
 		echo ""
 		return 0
 	end
