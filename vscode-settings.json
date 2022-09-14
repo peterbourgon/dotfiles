@@ -57,5 +57,12 @@
     "html.format.endWithNewline": true,
     "html.format.enable": false,
     "go.toolsManagement.autoUpdate": true,
-    "window.zoomLevel": 1,
+    "[html]": {
+        "editor.suggest.insertMode": "replace"
+    },
+    "html.autoCreateQuotes": false,
+    "html.validate.styles": false,
+    "rust-analyzer.cargo.features": [
+        "softsign",
+    ],
 }
