@@ -18,6 +18,7 @@
 	plog = log --graph --pretty=format:'%C(auto,red)%h · %C(auto,magenta)%an · %C(auto,red)%cr · %C(auto)%s%C(auto,green)%d'
 	lol  = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pb = "!git push origin $(git branch --show-current)"
 
 [color]
 	ui = auto
@@ -33,3 +34,11 @@
 
 [commit]
 	# gpgsign = true
+[user]
+	email = peter@bourgon.org
+	name = Peter Bourgon
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
